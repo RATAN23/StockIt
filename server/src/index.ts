@@ -28,9 +28,9 @@ app.use("/users" , userRoutes)  // curl http://localhost:8000/users
 app.use("/expenses" , expenseRoutes ) // curl http://localhost:8000/expenses
 
 // Server
-const port = process.env.PORT || 3001;
+const port = Number(process.env.PORT) || 3001;
 
-app.listen(port , () => {
+app.listen(port , "0.0.0.0", () => {
     console.log(`Server runing on port ${port}`)
 });
 
