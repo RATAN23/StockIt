@@ -3,6 +3,7 @@
 import { useAppSelector } from "@/app/redux";
 import { setIsSideBarCollapsed } from "@/state";
 import { Archive, CircleDollarSign, Clipboard, Layout, LucideIcon, Menu, SlidersHorizontal, User } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
@@ -59,7 +60,13 @@ const SideBar = () => {
   return (
     <div className={sideBarClassNames}>
       <div className={`flex justify-between gap-3 md:justify-normal items-center pt-8 ${isSideBarCollapsed ? "px-5" : "px-8"}`}>
-        <div className="">logo</div>
+        <Image
+        src="https://s3-stockit-inventorymanagement.s3.ap-south-1.amazonaws.com/logo2.webp"
+        alt="logo"
+        width={100}
+        height={100}
+        className="rounded w-12 " 
+        />
         <h1 className={`font-extrabold text-2xl ${isSideBarCollapsed ? "hidden" : "block"}`}>StockUp</h1>
 
         <button
